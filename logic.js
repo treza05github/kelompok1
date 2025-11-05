@@ -156,3 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // jalankan loadData di awal
   loadData();
 });
+
+window.editData = editData;
+window.hapusData = hapusData;
