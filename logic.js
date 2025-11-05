@@ -12,9 +12,8 @@ import {
 
 const nilaiRef = collection(db, "nilai");
 
-// ====================
-// 1️⃣ Validasi Input
-// ====================
+
+//Validasi Input
 function validasiInput(nama, nim, matkul, nilai) {
   if (!nama || !nim || !matkul || (nilai === "" || nilai === null || typeof nilai === "undefined")) {
     alert("❌ Semua field wajib diisi!");
@@ -31,9 +30,8 @@ function validasiInput(nama, nim, matkul, nilai) {
   return true;
 }
 
-// ====================
-// 2️⃣ Simpan Data (Create / Update)
-// ====================
+
+//Simpan Data (Create / Update)
 async function simpanData(id = null, nama, nim, matkul, nilai) {
   try {
     if (id) {
@@ -55,9 +53,8 @@ async function simpanData(id = null, nama, nim, matkul, nilai) {
   }
 }
 
-// ====================
-// 3️⃣ Tampilkan Data (Read)
-// ====================
+
+// Tampilkan Data (Read)
 async function loadData() {
   const tabel = document.getElementById("tabelData") || document.querySelector("#tabelNilai tbody");
   if (!tabel) return;
@@ -95,9 +92,8 @@ async function loadData() {
   }
 }
 
-// ====================
-// 4️⃣ Edit Data (Update Form)
-// ====================
+
+//Edit Data (Update Form)
 async function editData(id) {
   try {
     // ambil dokumen spesifik
@@ -120,9 +116,8 @@ async function editData(id) {
   }
 }
 
-// ====================
-// 5️⃣ Hapus Data (Delete)
-// ====================
+
+//Hapus Data 
 async function hapusData(id) {
   if (!confirm("Yakin ingin menghapus data ini?")) return;
   try {
@@ -136,9 +131,7 @@ async function hapusData(id) {
   }
 }
 
-// ====================
-// 6️⃣ Jalankan Saat Form Disubmit
-// ====================
+//Jalankan Saat Form Disubmit
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("nilaiForm");
   if (form) {
