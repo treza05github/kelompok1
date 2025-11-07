@@ -12,7 +12,14 @@
   <form id="formNilai">
     <input type="text" id="nama" placeholder="Nama Lengkap" required>
     <input type="text" id="nim" placeholder="701230101" required>
-    <input type="text" id="matkul" placeholder="Mata Kuliah" required>
+    <select type="text" id="matkul" required>
+                <option value="" disabled selected>Pilih mata kuliah...</option>
+                <option value="rpl">Rekayasa Perangkat Lunak</option>
+                <option value="multimedia">Multimedia</option>
+                <option value="sistemoperasi">Sistem Operasi</option>
+                <option value="basisdata">Basis Data</option>
+                <option value="Pemrograman">Pemrograman</option>
+    </select>
     <input type="number" id="nilai" placeholder="100" required>
     <button type="submit">Simpan</button>
   </form>
@@ -77,3 +84,4 @@
 
 </body>
 </html>
+
