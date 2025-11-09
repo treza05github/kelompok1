@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Input Nilai Mahasiswa</title>
   <link rel="stylesheet" href="form-input.css">
+  <!-- import SweetAlert2 buat notif waktu data disimpan-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
   <h1>Form Input Nilai Mahasiswa</h1>
@@ -60,6 +63,9 @@
           hideClass: {
             popup: 'animate__animated animate__fadeOutUp'
           }
+          }).then(() => {
+             form.reset();
+             location.reload(); 
         });
 
         form.reset();
@@ -84,5 +90,6 @@
 
 </body>
 </html>
+
 
 
