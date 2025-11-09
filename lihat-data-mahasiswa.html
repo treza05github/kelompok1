@@ -78,7 +78,15 @@
           // Ubah menjadi input
           namaCell.innerHTML = `<input type="text" value="${data.nama}" />`;
           nimCell.innerHTML = `<input type="text" value="${data.nim}" />`;
-          matkulCell.innerHTML = `<input type="text" value="${data.matkul}" />`;
+          matkulCell.innerHTML = `
+          <select>
+            <option value="Rekayasa Perangkat Lunak" ${data.matkul === "Rekayasa Perangkat Lunak" ? "selected" : ""}>Rekayasa Perangkat Lunak</option>
+            <option value="Multimedia" ${data.matkul === "Multimedia" ? "selected" : ""}>Multimedia</option>
+            <option value="Sistem Operasi" ${data.matkul === "Sistem Operasi" ? "selected" : ""}>Sistem Operasi</option>
+            <option value="Basis Data" ${data.matkul === "Basis Data" ? "selected" : ""}>Basis Data</option>
+            <option value="Pemrograman" ${data.matkul === "Pemrograman" ? "selected" : ""}>Pemrograman</option>
+          </select>
+          `;
           nilaiCell.innerHTML = `<input type="text" value="${data.nilai}" />`;
 
           aksiCell.innerHTML = `
@@ -90,7 +98,7 @@
           aksiCell.querySelector(".simpan").addEventListener("click", async () => {
             const namaBaru = namaCell.querySelector("input").value;
             const nimBaru = nimCell.querySelector("input").value;
-            const matkulBaru = matkulCell.querySelector("input").value;
+            const matkulBaru = matkulCell.querySelector("select").value;
             const nilaiBaru = nilaiCell.querySelector("input").value;
 
             if (namaBaru && nimBaru && matkulBaru && nilaiBaru) {
